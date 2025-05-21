@@ -5,56 +5,67 @@ const SharedGardenTip = () => {
         <div>
             <div className='p-24' >
                 <div  >
-                    <h1 className="text-6xl p-12 text-center">Add Coffee</h1>
-                    <p>It is a long established fact that a reader will be distraceted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here.</p>
+                    <h1 className="text-6xl p-12 text-center">Shared Garden Tips</h1>
+
                 </div>
                 <form  >
                     <div className='grid grid-cols-1 md:grid-cols-2 gap-6' >
                         <fieldset className="fieldset bg-base-200 border-base-300 rounded-box  border p-4">
 
 
-                            <label className="label">Name</label>
-                            <input type="text" name='name' className="input" placeholder="Enter coffee name" />
+                            <label className="label">Title</label>
+                            <input type="text" name='Title' className="input" placeholder="Enter Title" />
 
 
                         </fieldset>
                         <fieldset className="fieldset bg-base-200 border-base-300 rounded-box  border p-4">
 
 
-                            <label className="label">Supplier</label>
-                            <input type="text" name='supplier' className="input" placeholder="Enter coffee supplier" />
+                            <label className="label">Plant-Type</label>
+                            <input type="text" name='PlantType' className="input" placeholder="Enter Plant-Type" />
 
 
                         </fieldset>
                         <fieldset className="fieldset bg-base-200 border-base-300 rounded-box  border p-4">
 
 
-                            <label className="label">Price</label>
-                            <input type="text" name='price' className="input" placeholder="Price" />
+                            <label className="label">Level</label>
+                            <select defaultValue="Pick a level" className="select">
+                                <option disabled={true}>Pick a color</option>
+                                <option>Easy</option>
+                                <option>Medium</option>
+                                <option>Difficult</option>
+                            </select>
 
-
-                        </fieldset>
-                        <fieldset className="fieldset bg-base-200 border-base-300 rounded-box  border p-4">
-
-
-                            <label className="label">Quantity</label>
-                            <input type="text" name='quantity' className="input" placeholder="Enter coffee chef" />
 
 
                         </fieldset>
                         <fieldset className="fieldset bg-base-200 border-base-300 rounded-box  border p-4">
 
 
-                            <label className="label">Taste</label>
-                            <input type="text" name='taste' className="input" placeholder="Enter coffee taste" />
+                            <label className="label">Category</label>
+                            <input type="text" name='Category' className="input" placeholder="Enter Category" />
 
 
                         </fieldset>
                         <fieldset className="fieldset bg-base-200 border-base-300 rounded-box  border p-4">
 
 
-                            <label className="label">Details</label>
-                            <input type="text" name='details' className="input" placeholder="Enter coffee details" />
+                            <label className="label">Description</label>
+                            <textarea className="textarea" placeholder="Description"></textarea>
+
+
+                        </fieldset>
+                        <fieldset className="fieldset bg-base-200 border-base-300 rounded-box  border p-4">
+
+
+                            <label className="label">Availability</label>
+                             <select defaultValue="Pick a level" className="select">
+                                <option disabled={true}>Availability</option>
+                                <option>Public</option>
+                                <option>Hidden</option>
+                               
+                            </select>
 
 
                         </fieldset>
