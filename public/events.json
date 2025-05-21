@@ -1,0 +1,20 @@
+[
+    {
+        "eventName": "Garden Gala",
+        "location": "dhaka",
+        "time": "10 AM",
+        "img": "https://buildingandinteriors.com/wp-content/uploads/2022/05/garden-time-UST.webp"
+    },
+    {
+        "eventName": "chidren Garden Giggles",
+        "location": "rangpur",
+        "time": "10 AM",
+        "img": "https://t4.ftcdn.net/jpg/02/00/87/95/360_F_200879536_7gp2kmhJnzBCbkhSg2dDhUcYy7oYpj1n.jpg"
+    },
+    {
+        "eventName": "Garden Gala",
+        "location": "rajshahi",
+        "time": "10 AM",
+        "img": "https://media.istockphoto.com/id/1346744481/photo/anonymous-chef-harvesting-fresh-vegetables-on-a-farm.jpg?s=612x612&w=0&k=20&c=U9h4fAi68nwVndAJW8TF-f2lFFCO2Y-XrZWA2gah1Xw="
+    }
+]

@@ -1,0 +1,92 @@
+[
+    {
+        "name": "john",
+        "age": 65,
+        "gender": "male",
+        "status": "Active",
+        "experiences": "20 years in organic vegetable,flower gardening",
+        "image": "https://img.freepik.com/premium-photo/gardener-man-holding-pruning-shears_1368-69534.jpg?semt=ais_hybrid&w=740",
+        "total_shared_tips": 130
+    },
+    {
+        "name": "harry",
+        "age": 45,
+        "gender": "male",
+        "status": "Active",
+        "experiences": "11 years in organic vegetable,flower gardening",
+        "image": "https://img.freepik.com/premium-photo/professional-gardener-trimming-garden-decorative-trees_1426-8426.jpg?semt=ais_hybrid&w=740",
+        "total_shared_tips": 120
+    },
+    {
+        "name": "miller",
+        "age": 35,
+        "gender": "male",
+        "status": "Active",
+        "experiences": " 5 years in organic vegetable,flower gardening",
+        "image": "https://img.freepik.com/premium-photo/happy-man-apron-with-scoop-summer-garden_380164-256155.jpg?ga=GA1.1.879106373.1747835804&semt=ais_hybrid&w=740",
+        "total_shared_tips": 10
+    },
+    {
+        "name": "shane",
+        "age": 48,
+        "gender": "male",
+        "status": "Active",
+        "experiences": "12 years in organic vegetable,flower gardening",
+        "image": "https://img.freepik.com/free-photo/portrait-man-working-with-weedwacker_329181-20603.jpg?semt=ais_hybrid&w=740",
+        "total_shared_tips": 130
+    },
+    {
+        "name": "warn",
+        "age": 55,
+        "gender": "male",
+        "status": "Active",
+        "experiences": "10 years in organic vegetable,flower gardening",
+        "image": "https://img.freepik.com/free-photo/focused-male-florist-moving-rack-with-plants-pots-holding-shelf-with-houseplants-medium-shot-copy-space-gardening-job-concept_74855-12787.jpg?semt=ais_hybrid&w=740",
+        "total_shared_tips": 130
+    },
+    {
+        "name": "lira",
+        "age": 45,
+        "gender": "male",
+        "status": "Active",
+        "experiences": "10 years in organic vegetable,flower gardening",
+        "image": "https://img.freepik.com/free-photo/pleased-young-gardener-afro-american-guy-wearing-gardening-hat-holding-plante-with-clippers-isolated-olive-green-wall_141793-128421.jpg?semt=ais_hybrid&w=740",
+        "total_shared_tips": 130
+    },
+    {
+        "name": "jack",
+        "age": 45,
+        "gender": "male",
+        "status": "in active",
+        "experiences": "10 years in organic vegetable,flower gardening",
+        "image": "https://img.freepik.com/free-photo/positive-male-florist-holding-pot-with-flowering-plant-walking-greenhouse-front-view-gardening-job-botany-concept_74855-12948.jpg?semt=ais_hybrid&w=740",
+        "total_shared_tips": 130
+    },
+    {
+        "name": "john",
+        "age": 45,
+        "gender": "male",
+        "status": "in active",
+        "experiences": "10 years in organic vegetable,flower gardening",
+        "image": "https://img.freepik.com/free-photo/happy-young-attractive-bearded-caucasian-male-gardener-blue-t-shirt-gloves-smiling-holding-flower-pot-with-green-sprout-hands-looking-aside-with-excited-face-expression_176420-19922.jpg?ga=GA1.1.879106373.1747835804&semt=ais_hybrid&w=740",
+        "total_shared_tips": 130
+    },
+    {
+        "name": "tale",
+        "age": 45,
+        "gender": "male",
+        "status": "in active",
+        "experiences": "10 years in organic vegetable,flower gardening",
+        "image": "https://img.freepik.com/free-photo/smiling-young-caucasian-male-gardener-wearing-gardening-hat-waters-flowers-flowerpot-with-watering-can-isolated-orange-wall-with-copy-space_141793-97139.jpg?ga=GA1.1.879106373.1747835804&semt=ais_hybrid&w=740",
+        "total_shared_tips": 130
+    },
+    {
+        "name": "jerra",
+        "age": 45,
+        "gender": "male",
+        "status": "in active",
+        "experiences": "10 years in organic vegetable,flower gardening",
+        "image": "https://img.freepik.com/free-photo/close-up-portrait-attractive-mature-bearded-hispanic-florist-smiling-camera-watching-flowers-garden-near-countryside-house-with-happy-relaxed-face-expression_176420-19938.jpg?ga=GA1.1.879106373.1747835804&semt=ais_hybrid&w=740",
+        "total_shared_tips": 130
+    }
+]
