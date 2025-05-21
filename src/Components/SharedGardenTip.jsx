@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { use } from 'react';
+import { AuthContext } from '../Authentication/AuthContext';
 
 const SharedGardenTip = () => {
+    const {user} = use(AuthContext)
+    console.log(user)
     return (
         <div>
             <div className='p-24' >
@@ -69,6 +72,22 @@ const SharedGardenTip = () => {
 
 
                         </fieldset>
+                        <fieldset className="fieldset bg-base-200 border-base-300 rounded-box  border p-4">
+
+
+                            <label className="label">Email</label>
+                            <input type="email" value={user && user.email} disabled name='PlantType' className="input font-bold text-black" placeholder="Enter Plant-Type" />
+
+
+                        </fieldset>
+                        <fieldset className="fieldset bg-base-200 border-base-300 rounded-box  border p-4">
+
+
+                            <label className="label">Name</label>
+                            <input type="text" value={user && user.displayName} disabled name='PlantType' className="input font-bold text-black" placeholder="Enter Plant-Type" />
+
+
+                        </fieldset>
                     </div>
                     <fieldset className="fieldset bg-base-200 border-base-300 rounded-box my-6 border p-4">
 
@@ -78,7 +97,7 @@ const SharedGardenTip = () => {
 
 
                     </fieldset>
-                    <input type="submit" value="Add coffee" className='w-full btn ' />
+                    <input type="submit" value="Submit" className='w-full btn ' />
                 </form>
             </div>
         </div>
