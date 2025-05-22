@@ -26,7 +26,7 @@ const Header = () => {
         // </div>
 
         <div>
-            <div className="navbar bg-base-100 shadow-sm">
+            <div className="navbar bg-base-300 shadow-sm p-5 mb-5">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -34,7 +34,7 @@ const Header = () => {
                         </div>
                         <ul
                             tabIndex={0}
-                            className="menu menu-sm space-y-3 dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                            className="menu menu-sm space-y-3 dropdown-content bg-base-100 rounded-box z-1 mt-3 w-30 p-2 shadow">
                             <li><Link to={'/'} className='btn btn-primary mx-2.5' >Home</Link></li>
                             <li><Link to={'/gardener'} className='btn btn-primary mx-2.5' >Explore Gardeners</Link></li>
                             <li><Link to={'/browsetip'} className='btn btn-primary mx-2.5' >Browse Tip</Link></li>
@@ -48,7 +48,7 @@ const Header = () => {
 
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-xl"><img className='w-32 rounded-full' src="https://img.freepik.com/free-vector/logo-template-design_1222-85.jpg?uid=R201281551&ga=GA1.1.879106373.1747835804&semt=ais_hybrid&w=740" alt="" /></a>
+                    <a className="btn btn-ghost text-xl"><img className='w-32 rounded-full ' src="https://img.freepik.com/free-vector/logo-template-design_1222-85.jpg?uid=R201281551&ga=GA1.1.879106373.1747835804&semt=ais_hybrid&w=740" alt="" /></a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
