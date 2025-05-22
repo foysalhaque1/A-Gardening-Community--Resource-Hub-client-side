@@ -9,7 +9,7 @@ const TrendingTips = () => {
     )
     console.log(data)
     return (
-        <div className='my-16 bg-green-500'>
+        <div className='my-16 '>
             <h2 className='text-2xl text-white font-bold text-center' >Trending Tips For Gardening</h2>
             {
                 <div className='my-5 grid grid-cols-1 md:grid-cols-3 gap-4 w-full mx-auto p-6' >

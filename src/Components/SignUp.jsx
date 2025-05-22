@@ -36,7 +36,7 @@ const SignUp = () => {
             const user1 = res.user;
             // console.log(user);
             toast('You register your accoun successfully')
-            {user && navigate('/')}
+            
             updateUser({ displayName: name, photoURL: photo }).then(() => {
 
                 setUser({ ...user1, displayName: name, photoURL: photo })
@@ -45,10 +45,15 @@ const SignUp = () => {
                 setUser(user1)
             });
         }).catch(error => {
-            // const errorCode = error.code;
+            // const errorCode = error.code;s
             const errorMessage = error.message;
             toast(errorMessage)
-        })
+        });
+        if(user){
+            return navigate('/')
+        }else{
+            console.log('Create your account correctly')
+        }
     }
     return (
         <div className='flex justify-center min-h-screen items-center'>
