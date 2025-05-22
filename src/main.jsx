@@ -16,6 +16,7 @@ import GardenEvent from './Components/GardenEvent.jsx'
 import TipsDetailsPage from './Components/TipsDetailsPage.jsx'
 import UpdatePage from './Components/UpdatePage.jsx'
 import PrivateRoute from './Components/PrivateRoute.jsx'
+import ErrorPage from './Components/ErrorPage.jsx'
 const router = createBrowserRouter([
   {
     path: '/',
@@ -70,7 +71,7 @@ const router = createBrowserRouter([
           <UpdatePage></UpdatePage>
         </PrivateRoute>,
         loader: ({ params }) => fetch(`http://localhost:4000/tips/${params.id}`)
-      }
+      },
 
 
 
@@ -78,9 +79,10 @@ const router = createBrowserRouter([
 
   },
   {
-    path: '*/',
-    element: <h2>error page</h2>
+    path: '/*',
+    element: <ErrorPage></ErrorPage>
   }
+
 
 ])
 
