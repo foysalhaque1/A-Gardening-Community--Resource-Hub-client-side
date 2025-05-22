@@ -46,12 +46,16 @@ const router = createBrowserRouter([
       },
       {
         path: 'sharedtip',
-        element: <SharedGardenTip></SharedGardenTip>
+        element: <PrivateRoute>
+          <SharedGardenTip></SharedGardenTip>
+        </PrivateRoute>
       },
       {
         path: '/mytip/:email',
-        element: <MyTip></MyTip>,
-        loader:({params})=>fetch(`http://localhost:4000/tips/email/${params.email}`)
+        element: <PrivateRoute>
+          <MyTip></MyTip>
+        </PrivateRoute>,
+        loader: ({ params }) => fetch(`http://localhost:4000/tips/email/${params.email}`)
       },
       {
         path: '/tipsDetails/:id',
@@ -61,11 +65,13 @@ const router = createBrowserRouter([
         loader: ({ params }) => fetch(`http://localhost:4000/tips/${params.id}`)
       },
       {
-        path:'update/:id',
-        element:<UpdatePage></UpdatePage>,
-        loader:({params})=>fetch(`http://localhost:4000/tips/${params.id}`)
+        path: 'update/:id',
+        element: <PrivateRoute>
+          <UpdatePage></UpdatePage>
+        </PrivateRoute>,
+        loader: ({ params }) => fetch(`http://localhost:4000/tips/${params.id}`)
       }
-      
+
 
 
     ]
