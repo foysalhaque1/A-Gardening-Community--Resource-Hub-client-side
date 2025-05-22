@@ -3,6 +3,7 @@ import { useLoaderData } from 'react-router';
 import GardenEvent from './GardenEvent';
 import ActiveGardener from './ActiveGardener';
 import Banner from './Banner';
+import TrendingTips from './TrendingTips';
 
 
 const Home = () => {
@@ -24,7 +25,8 @@ const Home = () => {
                     activeGardeners.map(gardener => <ActiveGardener gardener={gardener} ></ActiveGardener>)
                 }
             </div>
-            
+            <TrendingTips></TrendingTips>
+
 
 
         </div>

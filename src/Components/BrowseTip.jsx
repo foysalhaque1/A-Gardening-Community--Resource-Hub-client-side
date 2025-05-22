@@ -1,14 +1,16 @@
-import React  from 'react';
+import React   from 'react';
 import { Link, useLoaderData } from 'react-router';
 
 import Swal from 'sweetalert2';
 
 const BrowseTip = () => {
     const data = useLoaderData();
+   
     console.log(data)
     const publicTips = data.filter(pubData => pubData.condition == "Public")
     // const [publicTips,setPublicTips] = useState(initialPublicTips)
     console.log(publicTips);
+    
   
     return (
         <div>
@@ -54,7 +56,7 @@ const BrowseTip = () => {
                                 <td>{user.condition}</td>
                                 <th className='space-x-3'>
                                     <Link to={`/tipsDetails/${user._id}`} ><button className="btn  btn-xs">See More</button></Link>
-                                    
+                                     
                                   
                                 </th>
                             </tr>)
