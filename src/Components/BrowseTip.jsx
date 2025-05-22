@@ -1,43 +1,15 @@
-import React, { useState } from 'react';
-import { useLoaderData } from 'react-router';
-import BrowseTipTable from './BrowseTipTable';
+import React  from 'react';
+import { Link, useLoaderData } from 'react-router';
+
 import Swal from 'sweetalert2';
 
 const BrowseTip = () => {
     const data = useLoaderData();
     console.log(data)
-    const initialPublicTips = data.filter(pubData => pubData.condition == "Public")
-    const [publicTips,setPublicTips] = useState(initialPublicTips)
+    const publicTips = data.filter(pubData => pubData.condition == "Public")
+    // const [publicTips,setPublicTips] = useState(initialPublicTips)
     console.log(publicTips);
-    const handleDelete = (id) => {
-
-        Swal.fire({
-            title: "Are you sure?",
-            text: "You won't be able to revert this!",
-            icon: "warning",
-            showCancelButton: true,
-            confirmButtonColor: "#3085d6",
-            cancelButtonColor: "#d33",
-            confirmButtonText: "Yes, delete it!"
-        }).then((result) => {
-            if (result.isConfirmed) {
-                fetch(`http://localhost:4000/tips/${id}`,{
-                    method:'DELETE',
-                  
-                }).then(res => res.json())
-                .then(data => {
-                    console.log(data)
-                    const remainingUsers = publicTips.filter(user=>user._id !== id);
-                    setPublicTips(remainingUsers)
-                    Swal.fire({
-                        title: "Deleted!",
-                        text: "Your file has been deleted.",
-                        icon: "success"
-                    });
-                })
-            }
-        });
-    }
+  
     return (
         <div>
 
@@ -81,9 +53,9 @@ const BrowseTip = () => {
                                 <td>{user.Category}</td>
                                 <td>{user.condition}</td>
                                 <th className='space-x-3'>
-                                    <button className="btn  btn-xs">View Details</button>
-                                    <button className="btn  btn-xs">Edit</button>
-                                    <button onClick={() => handleDelete(user._id)} className="btn  btn-xs">Delete</button>
+                                    <Link to={`/tipsDetails/${user._id}`} ><button className="btn  btn-xs">See More</button></Link>
+                                    
+                                  
                                 </th>
                             </tr>)
                         }

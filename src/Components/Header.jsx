@@ -41,7 +41,7 @@ const Header = () => {
                                 user ? <li><Link to={'/sharedtip'} className='btn btn-primary mx-2.5' >Shared Tip</Link></li> : ''
                             }
                             {
-                                user ? <li><Link to={'/mytip'} className='btn btn-primary mx-2.5' >My Tip</Link></li> : ''
+                                user ? <li><Link to={`/mytip/${user.email}`} className='btn btn-primary mx-2.5' >My Tip</Link></li> : ''
                             }
 
 
@@ -59,7 +59,7 @@ const Header = () => {
                             user ? <li><Link to={'/sharedtip'} className='btn btn-primary mx-2.5' >Share a Garden Tip</Link></li> : ''
                         }
                         {
-                            user ? <li><Link to={'/mytip'} className='btn btn-primary mx-2.5' >My Tip</Link></li> : ''
+                            user ? <li><Link to={`/mytip/${user.email}`} className='btn btn-primary mx-2.5' >My Tip</Link></li> : ''
                         }
 
 

@@ -13,6 +13,9 @@ import BrowseTip from './Components/BrowseTip.jsx'
 import SharedGardenTip from './Components/SharedGardenTip.jsx'
 import MyTip from './Components/MyTip.jsx'
 import GardenEvent from './Components/GardenEvent.jsx'
+import TipsDetailsPage from './Components/TipsDetailsPage.jsx'
+import UpdatePage from './Components/UpdatePage.jsx'
+import PrivateRoute from './Components/PrivateRoute.jsx'
 const router = createBrowserRouter([
   {
     path: '/',
@@ -39,16 +42,30 @@ const router = createBrowserRouter([
       {
         path: 'browsetip',
         element: <BrowseTip></BrowseTip>,
-        loader:()=>fetch('http://localhost:4000/tips')
+        loader: () => fetch('http://localhost:4000/tips')
       },
       {
         path: 'sharedtip',
         element: <SharedGardenTip></SharedGardenTip>
       },
       {
-        path: 'mytip',
-        element: <MyTip></MyTip>
+        path: '/mytip/:email',
+        element: <MyTip></MyTip>,
+        loader:({params})=>fetch(`http://localhost:4000/tips/email/${params.email}`)
       },
+      {
+        path: '/tipsDetails/:id',
+        element: <PrivateRoute>
+          <TipsDetailsPage></TipsDetailsPage>
+        </PrivateRoute>,
+        loader: ({ params }) => fetch(`http://localhost:4000/tips/${params.id}`)
+      },
+      {
+        path:'update/:id',
+        element:<UpdatePage></UpdatePage>,
+        loader:({params})=>fetch(`http://localhost:4000/tips/${params.id}`)
+      }
+      
 
 
     ]
