@@ -4,6 +4,7 @@ import GardenEvent from './GardenEvent';
 import ActiveGardener from './ActiveGardener';
 import Banner from './Banner';
 import TrendingTips from './TrendingTips';
+import ExtraSection1 from './ExtraSection1';
 
 
 const Home = () => {
@@ -26,6 +27,7 @@ const Home = () => {
                 }
             </div>
             <TrendingTips></TrendingTips>
+            <ExtraSection1></ExtraSection1>
 
 
 
