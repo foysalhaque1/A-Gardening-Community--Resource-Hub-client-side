@@ -1,12 +1,13 @@
 import React, { use, useState } from 'react';
 import { FaEye, FaEyeSlash, FaGoogle } from 'react-icons/fa';
 import { AuthContext } from '../Authentication/AuthContext';
-import { Link } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 import { toast, ToastContainer } from 'react-toastify';
 
 const SignUp = () => {
     const [showPass, setShowPass] = useState(false)
-    const { googleSignIn, createUser, setUser, updateUser } = use(AuthContext)
+    const { googleSignIn, createUser, setUser, updateUser,user } = use(AuthContext);
+    const navigate = useNavigate()
     const handleGoogleSignIn = e => {
         e.preventDefault();
         googleSignIn().then(res => {
@@ -25,9 +26,9 @@ const SignUp = () => {
         const photo = form.photo.value;
         const email = form.email.value;
         const password = form.password.value;
-        const passwordRegExp = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/;
+        const passwordRegExp = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).(?=.*[!@#$%^&*()_+=[\]{};':"\\|,.<>/?]).{8,}/;
         if (passwordRegExp.test(password) === false) {
-            toast('Must be  8 characters, including number, lowercase letter, uppercase letter');
+            toast('Must be  8 characters, including atleast a number,a lowercase letter,a uppercase letter,a special character');
             return
         }
         console.log({ name, email, photo, password });
@@ -35,6 +36,7 @@ const SignUp = () => {
             const user1 = res.user;
             // console.log(user);
             toast('You register your accoun successfully')
+            {user && navigate('/')}
             updateUser({ displayName: name, photoURL: photo }).then(() => {
 
                 setUser({ ...user1, displayName: name, photoURL: photo })
@@ -76,7 +78,7 @@ const SignUp = () => {
                             }</button>
                         </div>
 
-                        <button type='submit' className="btn btn-neutral mt-4 w-full">Register</button>
+                        <button type='submit'  className="btn btn-neutral mt-4 w-full">Register</button>
 
                     </form>
                     <button onClick={handleGoogleSignIn} className='btn btn-primary w-full my-3' ><FaGoogle></FaGoogle>Google sign in</button>
