@@ -1,8 +1,9 @@
 import React, { use } from 'react';
 import { Link } from 'react-router';
-import userImg from '../assets/download.png'
+// import userImg from '../assets/download.png'
 import { AuthContext } from '../Authentication/AuthContext';
 import { toast, ToastContainer } from 'react-toastify';
+
 
 const Header = () => {
     const { user, logOut } = use(AuthContext);
@@ -47,7 +48,7 @@ const Header = () => {
 
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-xl">daisyUI</a>
+                    <a className="btn btn-ghost text-xl"><img className='w-32 rounded-full' src="https://img.freepik.com/free-vector/logo-template-design_1222-85.jpg?uid=R201281551&ga=GA1.1.879106373.1747835804&semt=ais_hybrid&w=740" alt="" /></a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
@@ -67,16 +68,23 @@ const Header = () => {
 
                     </ul>
                 </div>
-                <div className="navbar-end space-x-3">
+                <div className="navbar-end space-x-3 mr-7">
+                    {
+                        user ? 
+                       <details className="dropdown">
+                                <summary className="btn m-1"><img className='w-12 rounded-full relative' src={user.photoURL} alt="" /></summary>
+                                <ul className="menu dropdown-content bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+                                   <li> <button className='btn btn-primary' onClick={handleLogOut} >Logout</button> </li>
+                                   
+                                </ul>
+                            </details>
+                        :  <Link to={'/signin'} className='btn btn-primary' >Sign in</Link>
+                    }
                     {
                         user && <p>{user.email}</p>
                     }
-                    {
-                        user ? <a href="" className='space-x-2.5'><img className='w-12 rounded-full' src={user.photoURL} alt="" /></a> : <a href="" className='space-x-2.5'><img className='w-12 rounded-full' src={userImg} alt="" /></a>
-                    }
-                    {
-                        user ? <button className='btn btn-primary' onClick={handleLogOut} >Logout</button> : <Link to={'/signin'} className='btn btn-primary' >Sign in</Link>
-                    }
+                    
+                   
                 </div>
             </div>
             <ToastContainer></ToastContainer>
