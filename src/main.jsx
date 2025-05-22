@@ -38,7 +38,8 @@ const router = createBrowserRouter([
       },
       {
         path: 'browsetip',
-        element: <BrowseTip></BrowseTip>
+        element: <BrowseTip></BrowseTip>,
+        loader:()=>fetch('http://localhost:4000/tips')
       },
       {
         path: 'sharedtip',

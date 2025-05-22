@@ -2,8 +2,27 @@ import React, { use } from 'react';
 import { AuthContext } from '../Authentication/AuthContext';
 
 const SharedGardenTip = () => {
-    const {user} = use(AuthContext)
+    const { user } = use(AuthContext)
     console.log(user)
+    const formSubmit = (e) => {
+        e.preventDefault();
+        const form = e.target;
+        const formData = new FormData(form);
+        const formValue = Object.fromEntries(formData.entries());
+        console.log(formValue);
+        fetch('http://localhost:4000/tips',{
+            method:'POST',
+            headers:{
+                'content-type':'application/json'
+            },
+            body:JSON.stringify(formValue)
+        }).then(res=>res.json())
+        .then(data=>{
+            console.log(data)
+        }).catch(error=>{
+            console.log(error)
+        })
+    }
     return (
         <div>
             <div className='p-24' >
@@ -11,7 +30,7 @@ const SharedGardenTip = () => {
                     <h1 className="text-6xl p-12 text-center">Shared Garden Tips</h1>
 
                 </div>
-                <form  >
+                <form onSubmit={formSubmit}  >
                     <div className='grid grid-cols-1 md:grid-cols-2 gap-6' >
                         <fieldset className="fieldset bg-base-200 border-base-300 rounded-box  border p-4">
 
@@ -33,7 +52,7 @@ const SharedGardenTip = () => {
 
 
                             <label className="label">Level</label>
-                            <select defaultValue="Pick a level" className="select">
+                            <select name='level' defaultValue="Pick a level" className="select">
                                 <option disabled={true}>Pick a color</option>
                                 <option>Easy</option>
                                 <option>Medium</option>
@@ -55,7 +74,7 @@ const SharedGardenTip = () => {
 
 
                             <label className="label">Description</label>
-                            <textarea className="textarea" placeholder="Description"></textarea>
+                            <textarea name='description' className="textarea" placeholder="Description"></textarea>
 
 
                         </fieldset>
@@ -63,11 +82,11 @@ const SharedGardenTip = () => {
 
 
                             <label className="label">Availability</label>
-                             <select defaultValue="Pick a level" className="select">
+                            <select name='condition' defaultValue="Pick a level" className="select">
                                 <option disabled={true}>Availability</option>
                                 <option>Public</option>
                                 <option>Hidden</option>
-                               
+
                             </select>
 
 
@@ -76,7 +95,7 @@ const SharedGardenTip = () => {
 
 
                             <label className="label">Email</label>
-                            <input type="email" value={user && user.email} disabled name='PlantType' className="input font-bold text-black" placeholder="Enter Plant-Type" />
+                            <input type="email" value={user && user.email} disabled name='email' className="input font-bold text-black" placeholder="Enter Plant-Type" />
 
 
                         </fieldset>
@@ -84,7 +103,7 @@ const SharedGardenTip = () => {
 
 
                             <label className="label">Name</label>
-                            <input type="text" value={user && user.displayName} disabled name='PlantType' className="input font-bold text-black" placeholder="Enter Plant-Type" />
+                            <input type="text" value={user && user.displayName} disabled name='name' className="input font-bold text-black" placeholder="Enter Plant-Type" />
 
 
                         </fieldset>
