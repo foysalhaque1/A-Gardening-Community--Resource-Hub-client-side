@@ -6,7 +6,7 @@ import Banner from './Components/Banner';
 
 const MainLayout = () => {
     return (
-        <div>
+        <div className='bg-base-100 dark:bg-gray-900 dark:text-blue-700 dark:font-bold' >
             <Header></Header>
             {/* <Banner></Banner> */}
             <div className='w-11/12 mx-auto' >

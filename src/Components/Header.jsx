@@ -3,6 +3,7 @@ import { Link } from 'react-router';
 // import userImg from '../assets/download.png'
 import { AuthContext } from '../Authentication/AuthContext';
 import { toast, ToastContainer } from 'react-toastify';
+import DarkToggleButton from './DarkToggleButton';
 
 
 const Header = () => {
@@ -45,12 +46,17 @@ const Header = () => {
                                 user ? <li><Link to={`/mytip/${user.email}`} className='btn btn-primary mx-2.5' >My Tip</Link></li> : ''
                             }
 
+                            <li>
+
+                                <DarkToggleButton></DarkToggleButton>
+                            </li>
+
 
                         </ul>
                     </div>
                     <a className="btn btn-ghost text-xl"><img className='w-32 rounded-full ' src="https://img.freepik.com/free-vector/logo-template-design_1222-85.jpg?uid=R201281551&ga=GA1.1.879106373.1747835804&semt=ais_hybrid&w=740" alt="" /></a>
                 </div>
-                <div className="navbar-center hidden lg:flex">
+                <div className="navbar-center hidden lg:flex lg:mr-28">
                     <ul className="menu menu-horizontal px-1">
                         <li><Link to={'/'} className='btn btn-primary mx-2.5' >Home</Link></li>
                         <li><Link to={'/gardener'} className='btn btn-primary mx-2.5' >Explore Gardeners</Link></li>
@@ -62,6 +68,8 @@ const Header = () => {
                         {
                             user ? <li><Link to={`/mytip/${user.email}`} className='btn btn-primary mx-2.5' >My Tip</Link></li> : ''
                         }
+                        <DarkToggleButton></DarkToggleButton>
+
 
 
 
@@ -70,21 +78,30 @@ const Header = () => {
                 </div>
                 <div className="navbar-end space-x-3 mr-7">
                     {
-                        user ? 
-                       <details className="dropdown">
-                                <summary className="btn m-1"><img className='w-12 rounded-full relative' src={user.photoURL} alt="" /></summary>
+                        user ?
+                            <details className="dropdown">
+                                <summary className="btn m-1 relative group">
+                                    <img className='w-12 rounded-full relative' src={user.photoURL} alt="" />
+                                    <div className='absolute w-full h-full -bottom-10 opacity-0 group-hover:bottom-0 group-hover:opacity-100 bg-black/20 flex justify-center items-center transition-all duration-300'>
+                                    <h2 className='text-white font-bold'>{user.displayName}</h2>
+
+                                    </div>
+                                    
+                                    </summary>
                                 <ul className="menu dropdown-content bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
-                                   <li> <button className='btn btn-primary' onClick={handleLogOut} >Logout</button> </li>
-                                   
+                                    <li> <button className='btn btn-primary' onClick={handleLogOut} >Logout</button> </li>
+
                                 </ul>
                             </details>
-                        :  <Link to={'/signin'} className='btn btn-primary' >Sign in</Link>
+                            : <Link to={'/signin'} className='btn btn-primary' >Sign in</Link>
                     }
                     {
                         user && <p>{user.email}</p>
                     }
-                    
-                   
+
+
+
+
                 </div>
             </div>
             <ToastContainer></ToastContainer>

@@ -19,6 +19,7 @@ import PrivateRoute from './Components/PrivateRoute.jsx'
 import ErrorPage from './Components/ErrorPage.jsx'
 import Terms from './Components/Terms.jsx'
 import ContactInfo from './Components/ContactInfo.jsx'
+import ThemeProvider from './ThemeProvider/ThemeProvider.jsx'
 const router = createBrowserRouter([
   {
     path: '/',
@@ -75,14 +76,14 @@ const router = createBrowserRouter([
         loader: ({ params }) => fetch(`http://localhost:4000/tips/${params.id}`)
       },
       {
-        path:'/terms',
-        element:<Terms></Terms>
+        path: '/terms',
+        element: <Terms></Terms>
       },
       {
-        path:'/contact',
-        element:<ContactInfo></ContactInfo>
+        path: '/contact',
+        element: <ContactInfo></ContactInfo>
       },
-     
+
 
 
 
@@ -99,8 +100,10 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <AuthProvider>
-      <RouterProvider router={router} ></RouterProvider>
-    </AuthProvider>
+    <ThemeProvider>
+      <AuthProvider>
+        <RouterProvider router={router} ></RouterProvider>
+      </AuthProvider>
+    </ThemeProvider>
   </StrictMode>,
 )
