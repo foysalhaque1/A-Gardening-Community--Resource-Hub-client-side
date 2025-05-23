@@ -47,13 +47,13 @@ const MyTip = () => {
                     {/* head */}
                     <thead>
                         <tr>
-                            <th>
+                            <th className='text-blue-500'>
                                 No
                             </th>
-                            <th>Image</th>
-                            <th>Title</th>
-                            <th>Category</th>
-                            <th>Status</th>
+                            <th className='text-blue-500'>Image</th>
+                            <th className='text-blue-500'>Title</th>
+                            <th className='text-blue-500'>Category</th>
+                            <th className='text-blue-500'>Status</th>
 
                         </tr>
                     </thead>

@@ -70,10 +70,6 @@ const Header = () => {
                         }
                         <DarkToggleButton></DarkToggleButton>
 
-
-
-
-
                     </ul>
                 </div>
                 <div className="navbar-end space-x-3 mr-7">
@@ -81,7 +77,7 @@ const Header = () => {
                         user ?
                             <details className="dropdown">
                                 <summary className="btn m-1 relative group">
-                                    <img className='w-12 rounded-full relative' src={user.photoURL} alt="" />
+                                    <img className='w-full p-3.5 py-3 h-fit ' src={user.photoURL} alt="" />
                                     <div className='absolute w-full h-full -bottom-10 opacity-0 group-hover:bottom-0 group-hover:opacity-100 bg-black/20 flex justify-center items-center transition-all duration-300'>
                                     <h2 className='text-white font-bold'>{user.displayName}</h2>
 
@@ -99,9 +95,6 @@ const Header = () => {
                         user && <p>{user.email}</p>
                     }
 
-
-
-
                 </div>
             </div>
             <ToastContainer></ToastContainer>
@@ -110,4 +103,11 @@ const Header = () => {
 };
 
 export default Header;
+
+
+
+
+
+
+
 

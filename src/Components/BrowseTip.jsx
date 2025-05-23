@@ -20,13 +20,27 @@ const BrowseTip = () => {
                     {/* head */}
                     <thead>
                         <tr>
-                            <th>
+                            <th className='text-blue-500'>
                                 No
                             </th>
-                            <th>Image</th>
-                            <th>Title</th>
-                            <th>Category</th>
-                            <th>Status</th>
+                            <th className='text-blue-500' >Image</th>
+                            <th className='text-blue-500' >Title</th>
+                            <th className='text-blue-500'>Category</th>
+                            <th className='text-blue-500'>Status</th>
+                            <div className='flex gap-2.5 mt-2.5'>
+                                <div>
+                                    <input type="radio" name="topping" id="Easy" />
+                                    <label htmlFor='Easy'>Easy</label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="topping" id="medim" />
+                                    <label htmlFor='Easy'>Medium</label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="topping" id="difficult" />
+                                    <label htmlFor='Easy'>Difficult</label>
+                                </div>
+                            </div>
 
                         </tr>
                     </thead>
