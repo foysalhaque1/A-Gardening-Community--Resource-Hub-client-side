@@ -13,21 +13,25 @@ const Home = () => {
     // const [data, setData] = useState({})
     const gardeners = useLoaderData();
     console.log(gardeners);
-    const activeGardeners = gardeners.filter(gardener=>gardener.status == "Active");
+    const activeGardeners = gardeners.filter(gardener => gardener.status == "Active");
     console.log(activeGardeners)
 
-    
+
 
     return (
         <div>
-        <Images></Images>
+            <Images></Images>
             {/* <GardenEvent></GardenEvent> */}
-            <div className='my-5 grid grid-cols-1 md:grid-cols-3 gap-4 w-full mx-auto' >
+            <div>
+<h2 className='text-center text-2xl font-bold  mt-6 bg-green-50'>Active Gardeners</h2>
+                <div className='my-5 grid grid-cols-1 md:grid-cols-3 gap-4 w-full mx-auto' >
 
-                {
-                    activeGardeners.map(gardener => <ActiveGardener gardener={gardener} ></ActiveGardener>)
-                }
+                    {
+                        activeGardeners.map(gardener => <ActiveGardener gardener={gardener} ></ActiveGardener>)
+                    }
+                </div>
             </div>
+            <h2 className='text-center text-2xl font-bold  mt-6 bg-green-50'>Top Trending Tips</h2>
             <TrendingTips></TrendingTips>
             <ExtraSection1></ExtraSection1>
             <ExtraSection2></ExtraSection2>
