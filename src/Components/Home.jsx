@@ -6,6 +6,7 @@ import Banner from './Banner';
 import TrendingTips from './TrendingTips';
 import ExtraSection1 from './ExtraSection1';
 import ExtraSection2 from './ExtraSection2';
+import Images from './Images';
 
 
 const Home = () => {
@@ -19,8 +20,8 @@ const Home = () => {
 
     return (
         <div>
-        <Banner></Banner>
-            <GardenEvent></GardenEvent>
+        <Images></Images>
+            {/* <GardenEvent></GardenEvent> */}
             <div className='my-5 grid grid-cols-1 md:grid-cols-3 gap-4 w-full mx-auto' >
 
                 {
