@@ -14,7 +14,7 @@ const UpdatePage = () => {
         const formData = new FormData(form);
         const formInfo = Object.fromEntries(formData.entries());
         console.log(formInfo);
-        fetch(`http://localhost:4000/tips/${data._id}`, {
+        fetch(`https://assignment-10-server-side-rosy.vercel.app/tips/${data._id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

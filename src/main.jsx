@@ -28,7 +28,7 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Home></Home>,
-        loader: () => fetch('http://localhost:4000/gardeners')
+        loader: () => fetch('https://assignment-10-server-side-rosy.vercel.app/gardeners')
       },
       {
         path: 'signin',
@@ -46,7 +46,7 @@ const router = createBrowserRouter([
       {
         path: 'browsetip',
         element: <BrowseTip></BrowseTip>,
-        loader: () => fetch('http://localhost:4000/tips')
+        loader: () => fetch('https://assignment-10-server-side-rosy.vercel.app/tips')
       },
       {
         path: 'sharedtip',
@@ -59,21 +59,21 @@ const router = createBrowserRouter([
         element: <PrivateRoute>
           <MyTip></MyTip>
         </PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:4000/tips/email/${params.email}`)
+        loader: ({ params }) => fetch(`https://assignment-10-server-side-rosy.vercel.app/tips/email/${params.email}`)
       },
       {
         path: '/tipsDetails/:id',
         element: <PrivateRoute>
           <TipsDetailsPage></TipsDetailsPage>
         </PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:4000/tips/${params.id}`)
+        loader: ({ params }) => fetch(`https://assignment-10-server-side-rosy.vercel.app/tips/${params.id}`)
       },
       {
         path: 'update/:id',
         element: <PrivateRoute>
           <UpdatePage></UpdatePage>
         </PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:4000/tips/${params.id}`)
+        loader: ({ params }) => fetch(`https://assignment-10-server-side-rosy.vercel.app/tips/${params.id}`)
       },
       {
         path: '/terms',
@@ -86,7 +86,7 @@ const router = createBrowserRouter([
       {
         path: '/browseTip/:level',
         element: <ContactInfo></ContactInfo>,
-        loader:({params})=>fetch(`http://localhost:4000/tips/selectlevel/${params.level}`)
+        loader:({params})=>fetch(`https://assignment-10-server-side-rosy.vercel.app/tips/selectlevel/${params.level}`)
       },
 
 

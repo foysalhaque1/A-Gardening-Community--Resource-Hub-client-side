@@ -77,7 +77,7 @@ const Header = () => {
                         user ?
                             <details className="dropdown">
                                 <summary className="btn m-1 relative group">
-                                    <img className='w-full p-3.5 py-3 h-fit ' src={user.photoURL} alt="" />
+                                    <img className=' ' src={user.photoURL} alt="" />
                                     <div className='absolute w-full h-full -bottom-10 opacity-0 group-hover:bottom-0 group-hover:opacity-100 bg-black/20 flex justify-center items-center transition-all duration-300'>
                                     <h2 className='text-white font-bold'>{user.displayName}</h2>
 

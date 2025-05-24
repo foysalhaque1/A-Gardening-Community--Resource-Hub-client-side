@@ -18,7 +18,7 @@ const MyTip = () => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:4000/tips/${id}`,{
+                fetch(`https://assignment-10-server-side-rosy.vercel.app/tips/${id}`,{
                     method:'DELETE',
                   
                 }).then(res => res.json())

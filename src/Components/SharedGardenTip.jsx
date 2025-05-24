@@ -17,7 +17,7 @@ const SharedGardenTip = () => {
             ...rest
         }
         console.log(userProfile);
-        fetch('http://localhost:4000/tips', {
+        fetch('https://assignment-10-server-side-rosy.vercel.app/tips', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

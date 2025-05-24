@@ -5,6 +5,7 @@ import { auth } from '../Firebase/firebase.init';
 
 const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
+
     const [loading,setLoading] = useState(true)
     console.log(loading,user)
     const googleProvider = new GoogleAuthProvider();
@@ -31,7 +32,8 @@ const updateUser = (updatedData)=>{
         return () => {
             unSubscribe()
         }
-    }, [])
+    }, []);
+    console.log(user)
     const authData = {
         googleSignIn,
         createUser,

@@ -5,7 +5,7 @@ const ExploreGardeners = () => {
     const data = useLoaderData();
     console.log(data);
 
-    fetch('http://localhost:4000/gardeners', {
+    fetch('https://assignment-10-server-side-rosy.vercel.app/gardeners', {
         method: 'POST',
         headers: {
             'content-type': 'application/json'

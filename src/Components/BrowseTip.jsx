@@ -7,11 +7,11 @@ const BrowseTip = () => {
 
     const data = useLoaderData();
     const [selectTips, setSelectTips] = useState([]);
-    // const promise = fetch('http://localhost:4000/tips/selectlevel/Easy').then(res=>res.json())
+    // const promise = fetch('https://assignment-10-server-side-rosy.vercel.app/tips/selectlevel/Easy').then(res=>res.json())
     // // const dat = use(promise);
     // // console.log(dat)
     //  useEffect(()=>{
-    //         fetch('http://localhost:4000/tips/selectlevel/Easy').then(res=>res.json())
+    //         fetch('https://assignment-10-server-side-rosy.vercel.app/tips/selectlevel/Easy').then(res=>res.json())
     //         .then(data=>setEasyData(data))
     //     })
 
@@ -26,17 +26,17 @@ const BrowseTip = () => {
     //console.log(publicTips);
     const handleEasy = () => {
 
-        fetch('http://localhost:4000/tips/selectlevel/Easy').then(res => res.json())
+        fetch('https://assignment-10-server-side-rosy.vercel.app/tips/selectlevel/Easy').then(res => res.json())
             .then(data => setSelectTips(data));
         }
     const handleMedium = () => {
 
-        fetch('http://localhost:4000/tips/selectlevel/Medium').then(res => res.json())
+        fetch('https://assignment-10-server-side-rosy.vercel.app/tips/selectlevel/Medium').then(res => res.json())
             .then(data => setSelectTips(data));
         }
     const handleDifficult = () => {
 
-        fetch('http://localhost:4000/tips/selectlevel/Difficult').then(res => res.json())
+        fetch('https://assignment-10-server-side-rosy.vercel.app/tips/selectlevel/Difficult').then(res => res.json())
             .then(data => setSelectTips(data));
         }
 

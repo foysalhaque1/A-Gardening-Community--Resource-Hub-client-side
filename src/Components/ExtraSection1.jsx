@@ -2,11 +2,11 @@ import React from 'react';
 
 const ExtraSection1 = () => {
     return (
-        <div className='mt-20 text-center mb-16 bg-green-400 p-8' >
+        <div className='mt-20 text-center mb-16 bg-green-400 p-8 ' >
 
             <h2 className='text-5xl font-bold ' >Turn your home into a Greenhouse!</h2>
             <p className='mt-10 text-2xl mb-10'> The name “greenhouse” stuck because these structures help plants stay green and healthy. It connects to the idea that these places are like a special house for plants.</p>
-            <div className='flex justify-center gap-20 mt-10  ' >
+            <div className='grid grid-cols-1 lg:grid-cols-3 justify-center gap-20 mt-10 sm:flex-col  ' >
                 <div className='text-center'>
 
                     <img className='mx-auto' src='https://dtgardening.wpengine.com/wp-content/uploads/2016/12/img-cap4.jpg' alt="" />
@@ -39,7 +39,7 @@ const ExtraSection1 = () => {
             <div className='grid grid-cols-1'>
                 <h2 className='text-3xl font-bold mb-4 my-5'>Why should you build a greenhouse?</h2>
                 <p className='my-6'>The main reason why you would want to build a greenhouse is to garden even outside of the typical growing season, as the greenhouse protects your plants from the elements.</p>
-                <div className='flex gap-4 my-14'  >
+                <div className='grid lg:grid-cols-3 grid-cols-1 gap-4 my-14'  >
                     <div className='border-2 p-3 '>
 
                         <h2 className='text-2xl text-blue-700 font-bold'>Energy efficiency</h2>
