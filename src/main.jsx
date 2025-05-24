@@ -83,6 +83,11 @@ const router = createBrowserRouter([
         path: '/contact',
         element: <ContactInfo></ContactInfo>
       },
+      {
+        path: '/browseTip/:level',
+        element: <ContactInfo></ContactInfo>,
+        loader:({params})=>fetch(`http://localhost:4000/tips/selectlevel/${params.level}`)
+      },
 
 
 

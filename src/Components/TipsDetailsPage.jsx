@@ -1,12 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { FaThumbsUp } from 'react-icons/fa';
 import { useLoaderData } from 'react-router';
 
 const TipsDetailsPage = () => {
     const data = useLoaderData();
+    const [like,setLike] = useState(0);
+    const handleClick = () =>{
+        setLike(like+1);
+    }
     console.log(data)
     return (
-        <div>
+        <div className='relative'>
+            <div className='absolute right-2 top-0.5 flex items-center gap-2'>
+               
+                <button onClick={handleClick} className='btn btn-primary'><FaThumbsUp></FaThumbsUp> Like-{like} </button>
+                
+                
+            </div>
             <div className="hero bg-green-300 min-h-screen">
+                
+                
                 <div className="hero-content flex-col lg:flex-row">
                     <img
                         src={data.photo}
