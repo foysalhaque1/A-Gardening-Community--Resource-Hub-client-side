@@ -1,0 +1,10 @@
+Project name: A website of gardening community and resource club
+live site-https://assignment-10-client-sid-c244c.web.app/
+Features of project:
+1.The authentication of project is built on firebase.
+2.React framework is used here and different packages are included.
+3.In banner of the project react slick slide and carousel package are used.
+4.The backend is controlled by MongoDB server.
+5.The website has different dynamic section .
+
+Project Description: The project is built on the base of gardening related issue. Here the workshop for gardening information is included. The gardeners which are very famous are shown here. There is section for sign up of  gardeners.They share their gardening tip in tip section, Which are stored in database. The section is dynamically shown on public but not be editable.There is a footer for contact info.
