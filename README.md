@@ -3,7 +3,7 @@
 
 ## 🔍 Overview
 
-A platform for gardening enthusiasts to share tips, find local gardeners, ask plant care questions, post or join gardening events, and connect over shared interests like composting, hydroponics, balcony gardens, etc.
+A platform for gardening enthusiasts to share tips, find local gardeners, ask plant care questions, post or join gardening events, and connect over shared interests like composting, hydroponics, balcony gardens, etc.The platform fosters a supportive online environment where beginners and experienced gardeners alike can engage in meaningful conversations, expand their knowledge, and build community through a shared love of gardening.
 
 
 ## 🌐 Live Demo
