@@ -1,5 +1,5 @@
 # React + Vite
-# 🏖️  Explore Tours
+# 🏖️  Nature House
 
 ## 🔍 Overview
 Project Overview 
@@ -25,29 +25,19 @@ https://tourism-management-syste-465b0.web.app/
 - use firebase JWT
 
 ## 📦 Dependencies
-   "@stripe/react-stripe-js": "^3.7.0",
-    "@stripe/stripe-js": "^7.5.0",
-    "@tailwindcss/cli": "^4.1.11",
-    "@tailwindcss/vite": "^4.1.11",
-    "@tanstack/react-query": "^5.83.0",
-    "axios": "^1.10.0",
-    "firebase": "^12.0.0",
-    "framer-motion": "^12.23.9",
+   "@tailwindcss/vite": "^4.1.7",
+    "firebase": "^11.7.3",
     "react": "^19.1.0",
-    "react-confetti": "^6.4.0",
-    "react-datepicker": "^8.4.0",
     "react-dom": "^19.1.0",
-    "react-hook-form": "^7.60.0",
+    "react-fast-marquee": "^1.6.5",
     "react-icons": "^5.5.0",
-    "react-responsive-carousel": "^3.2.23",
-    "react-router": "^7.7.0",
-    "react-select": "^5.10.2",
-    "react-share": "^5.2.2",
-    "react-tabs": "^6.1.0",
+    "react-router": "^7.6.0",
+    "react-slick": "^0.30.3",
+    "react-slideshow-image": "^4.3.2",
     "react-toastify": "^11.0.5",
-    "sweetalert2": "^11.6.13",
-    "tailwindcss": "^4.1.11",
-    "uuid": "^11.1.0"
+    "slick-carousel": "^1.8.1",
+    "sweetalert2": "^11.21.2",
+    "tailwindcss": "^4.1.7"
 
 
 
