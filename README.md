@@ -7,7 +7,7 @@ A platform for gardening enthusiasts to share tips, find local gardeners, ask pl
 
 
 ## 🌐 Live Demo
-https://tourism-management-syste-465b0.web.app/
+https://assignment-10-client-sid-c244c.web.app/
 
 ## 🛠️ Technologies Used
 - React.js
@@ -19,10 +19,10 @@ https://tourism-management-syste-465b0.web.app/
 
 ## ✨ Core Features
 - User authentication
-- Book a tour with selected guide
-- Admin dashboard for managing packages and guides
-- Stripe payment integration
-- use firebase JWT
+- User can share their gardening tip.
+- Users can see the popular gardener and the garden events.
+- Users can access their own garden tip,edit and delete
+- use firebase authentication
 
 ## 📦 Dependencies
    "@tailwindcss/vite": "^4.1.7",
