@@ -44,8 +44,8 @@ https://assignment-10-client-sid-c244c.web.app/
 ## 🧑‍💻 Run Locally
 
 ```bash
-git clone https://github.com/foysalhaque1/tour-management-system.git
-cd tourism-website
+git clone https://github.com/foysalhaque1/A-Gardening-Community--Resource-Hub-client-side.git
+cd gardening-website
 npm install
 npm run dev
 
